@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600;780;800;900& display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;780;800;900& display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #c9b9a7 !important;
+    /* background: url(FLASHCARD/assets/img/background.jpg) no-repeat; */
+    background-size: cover; 
+    background-position: center;
+}
+
+ .header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: rgba(0,0,0, .1);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+ }
+
+ .logo{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+ }
+
+ .imglogo{
+   width: 10rem;
+   height: auto;
+ }
+
+ .navbar a{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+ }
+
+ .icon{
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+ }
+
+ /* FLASHCARD */
+
+ .cardcontainer {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.flashcard {
+   width: 200px;
+   height: 300px;
+   margin: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   perspective: 1000px; /* Effet 3D */
+}
+
+.front, .back {
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+   box-sizing: border-box;
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+.front {
+   background-color: #fff;
+   z-index: 2;
+}
+
+.back {
+   background-color: #f0f0f0;
+   transform: rotateY(180deg);
+}
+
+.flashcard:hover .front {
+   transform: rotateY(-180deg);
+}
+
+.flashcard:hover .back {
+   transform: rotateY(0deg);
+}
+
+.cardcontainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 20%;
+   
+}
